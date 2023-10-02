@@ -5,13 +5,10 @@ namespace BookingManagementApp.Models
 {
     public class BaseEntity
     {
-        //membuat primary key dan menamai kolom
-        [Key, Column("guid")]
+        [Key, Column("guid")]//menandakan kunci utama
         public Guid Guid { get; set; }
-        //tidak boleh null dan menamai kolom 
         [Required, Column("created_date")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
-        //tidak boleh null dan menamai kolom 
         [Required, Column("modified_date")]
         public DateTime ModifiedDate { get; set; }
     }
